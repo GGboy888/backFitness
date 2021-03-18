@@ -1,0 +1,92 @@
+package com.igeek.wtfitness.service;
+
+import com.igeek.wtfitness.dao.CoachDao;
+import com.igeek.wtfitness.dao.PrivateCoachInfoDao;
+import com.igeek.wtfitness.entity.PrivateCoachInfo;
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * @Description 会员私教信息service实现层
+ * @Author wt
+ * @Date 2021/3/11 21:49
+ */
+
+public class PrivateCoachInfoService {
+    private PrivateCoachInfoDao privateCoachInfoDao;
+    private CoachDao coachDao;
+
+
+/**
+     * @Description 会员私教信息service实现层-分页查询
+     * @Author wt
+     * @Date 2021/3/11 21:49
+     */
+
+   /* public Map<String,Object> query(Map<String,Object> map1){
+        //分页
+        String jpal="from PrivateCoachInfo where 1=1";
+        if(map1.get("subjectid")!=null && !map1.get("subjectid").equals("")){
+            jpal =jpal+" and subjectid = '"+map1.get("subjectid")+"'";
+        }
+        if(map1.get("coachid")!=null && !map1.get("coachid").equals("")){
+            jpal =jpal+" and coachid = '"+map1.get("coachid")+"'";
+        }
+        if(map1.get("memberid")!=null && !map1.get("memberid").equals("")){
+            jpal =jpal+" and memberid = '"+map1.get("memberid")+"'";
+        }
+        Query qu=entityManager.createQuery(jpal);
+        //起始页书
+        qu.setFirstResult((int)map1.get("qi"));
+        //结束页数
+        qu.setMaxResults((int)map1.get("shi"));
+
+        //查询多少条数据
+        String jpa="select count(*) from PrivateCoachInfo p where 1=1";
+        if(map1.get("subjectid")!=null && !map1.get("subjectid").equals("")){
+            jpa =jpa+" and subjectid = '"+map1.get("subjectid")+"'";
+        }
+        if(map1.get("coachid")!=null && !map1.get("coachid").equals("")){
+            jpa =jpa+" and coachid = '"+map1.get("coachid")+"'";
+        }
+        if(map1.get("memberid")!=null && !map1.get("memberid").equals("")){
+            jpa =jpa+" and memberid = '"+map1.get("memberid")+"'";
+        }
+
+        Long count=(Long) entityManager.createQuery(jpa).getSingleResult();
+        Map<String,Object> map=new HashMap<String,Object>();
+        map.put("total",count);
+        map.put("rows",qu.getResultList());
+        return map;
+    }*/
+
+/**
+     * @Description 会员私教信息service实现层-计算总数量
+     * @Author wt
+     * @Date 2021/3/11 21:49
+     */
+
+   /* public Long count(Integer memid){
+        String jpa="select count(*) from PrivateCoachInfo p where memberId="+memid;
+        Query query=entityManager.createQuery(jpa);
+        System.out.println(query);
+        Long c=(Long)query.getSingleResult();
+
+        return c;
+    }*/
+/**
+     * @Description 会员私教信息service实现层-分页查询
+     * @Author wt
+     * @Date 2021/3/11 21:49
+     */
+
+/* public int update(PrivateCoachInfo privateCoachInfo){
+        PrivateCoachInfo privateCoachInfo1=privateCoachInfoDao.findById(privateCoachInfo.getPid()).get();
+        privateCoachInfo1.setCoach(privateCoachInfo.getCoach());
+        privateCoachInfoDao.(privateCoachInfo1);
+        return 1;
+    }*/
+
+}
